@@ -220,7 +220,7 @@ def permutations_for_truth_values(n):
     return perms
 
 
-def proveFormula(F):
+def prove_formula(F):
     F = make_saner(F)
 
     ## Special case when just one literal
@@ -267,13 +267,3 @@ def proveFormula(F):
         return TAUTOLOGY
 
     return total_trues
-
-
-problems = ['p',
-        '(NOT (NOT (NOT (NOT not))  )           )',
-        '(IF p p)',
-        '(AND p (NOT p))']
-answers = [1,
-        1,
-        'T',
-        'U']
